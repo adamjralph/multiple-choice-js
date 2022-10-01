@@ -1,0 +1,57 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #888;
+}
+.start {
+  display: grid;
+  place-content: center;
+}
+
+.quiz {
+  display: grid;
+  place-content: center;
+}
+.question,
+.results {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 1rem;
+  border: 1px inset #333;
+  border-radius: 1rem;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results-btn {
+  margin: 1rem 1rem 0 0;
+  place-self: end;
+}
+
+.next-btn,
+.beginning-btn {
+  margin: 1rem 0 0 1rem;
+  place-self: end;
+}
+
+.results {
+  margin-top: 1rem;
+}
+
+.options {
+  margin-bottom: 1rem;
+}
+
+input {
+  display: inline-block;
+}
+
+label {
+  display: inline-block;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+  </head>
+  <body>
+    <section class="quiz">
+      <h1>Question 2</h1>
+      <div class="question">
+        <form
+          action="submit"
+          class="question"
+          id="question"
+        >
+          <fieldset>
+            <h3>What is the answer to question 2?</h3>
+            <div class="options">
+              <input
+                type="radio"
+                name="q1"
+                id="q1"
+                value="a1"
+              />
+              <label for="q1">The answer is 1.</label>
+            </div>
+            <div class="options">
+              <input
+                type="radio"
+                name="q1"
+                id="q1"
+                value="correct"
+              />
+              <label for="q1">The answer is 2.</label>
+            </div>
+            <div class="options">
+              <input
+                type="radio"
+                name="q1"
+                id="q1"
+                value="a3"
+              />
+              <label for="q1">The answer is 3.</label>
+            </div>
+            <pre
+              class="response"
+              id="log"
+            ></pre>
+            <button type="submit">Enter</button>
+          </fieldset>
+        </form>
+        <div class="bottom-buttons">
+          <!-- <a href="q2.html">
+            <button class="btn next-btn">Next Question</button>
+          </a> -->
+          <a href="results.html">
+            <button class="btn results-btn">Show Results</button>
+          </a>
+        </div>
+      
+    </section>
+    <script>
+      const question = document.getElementById("question");
+      const log = document.getElementById("log");
+
+      var score = {};
+
+      question.addEventListener(
+        "submit",
+        (e) => {
+          const data = new FormData(question);
+          let output = "";
+          console.log("Clicked!");
+          for (const entry of data) {
+            if (entry[1] === "correct") {
+              localStorage.setItem(2, 1);
+              output = `That is the correct answer!`;
+            } else {
+              localStorage.setItem(2, 0);
+              score.q1 = "Incorrect";
+              output = "Sorry, that is not the right answer";
+            }
+          }
+          log.innerText = output;
+          e.preventDefault();
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
