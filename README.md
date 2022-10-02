@@ -23,7 +23,7 @@ Ideally this app will eventually contain multiple tests as well as a presentatio
 #### Version two
 
 - ~~ Add required validation to prevent null scores ~~
-- Message displays to select answer if nothing entered
+- ~~ Message displays to select answer if nothing entered ~~
 - ~~ Next button only appears after question has been answered ~~
 - Inactive form after enter button has been pressed
 - For the last question a "Finish" button should appear instead of "Next"
@@ -31,3 +31,4 @@ Ideally this app will eventually contain multiple tests as well as a presentatio
 #### Version three
 
 - Improve styles - Add bootstrap for pro look
+- Add some teaching content
