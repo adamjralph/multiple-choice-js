@@ -32,7 +32,7 @@
                 type="radio"
                 name="q1"
                 id="q1"
-                value="a1"
+                value="no"
               />
               <label for="q1">The answer is 1.</label>
             </div>
@@ -50,7 +50,7 @@
                 type="radio"
                 name="q1"
                 id="q1"
-                value="a3"
+                value="no"
               />
               <label for="q1">The answer is 3.</label>
             </div>
@@ -71,33 +71,6 @@
         </div>
       
     </section>
-    <script>
-      const question = document.getElementById("question");
-      const log = document.getElementById("log");
-
-      var score = {};
-
-      question.addEventListener(
-        "submit",
-        (e) => {
-          const data = new FormData(question);
-          let output = "";
-          console.log("Clicked!");
-          for (const entry of data) {
-            if (entry[1] === "correct") {
-              localStorage.setItem(2, 1);
-              output = `That is the correct answer!`;
-            } else {
-              localStorage.setItem(2, 0);
-              score.q1 = "Incorrect";
-              output = "Sorry, that is not the right answer";
-            }
-          }
-          log.innerText = output;
-          e.preventDefault();
-        },
-        false
-      );
-    </script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
