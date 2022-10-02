@@ -1,0 +1,71 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+body {
+  background-color: rgb(240, 240, 240);
+}
+.start {
+  display: grid;
+  place-content: center;
+}
+
+.quiz {
+  display: grid;
+  place-content: center;
+}
+.question,
+.results {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 1rem;
+  border: 1px inset #333;
+  border-radius: 1rem;
+}
+
+.results {
+  margin-top: 1rem;
+  border: none;
+}
+
+.print-results p {
+  margin-left: 1rem;
+}
+
+.results-text {
+  margin-left: 1rem;
+}
+
+.results-btn {
+  max-width: 40%;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-btn,
+.beginning-btn,
+.finish-btn {
+  margin: 1rem 0 0 1rem;
+  place-self: end;
+}
+
+.options {
+  margin-bottom: 1rem;
+}
+
+input {
+  display: inline-block;
+}
+
+label {
+  display: inline-block;
+}

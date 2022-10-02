@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+  </head>
+  <body>
+    <section class="quiz">
+      <h1>Question 2</h1>
+      <div class="question">
+        <form
+          action="submit"
+          class="question-2"
+          id="question"
+          data-number="2"
+        >
+          <fieldset>
+            <h3>What is the answer to question 2?</h3>
+            <div class="options">
+              <input
+                type="radio"
+                name="q"
+                id="q2"
+                value="no"
+              />
+              <label for="q">The answer is 1.</label>
+            </div>
+            <div class="options">
+              <input
+                type="radio"
+                name="q"
+                id="q2"
+                value="correct"
+              />
+              <label for="q">The answer is 2.</label>
+            </div>
+            <div class="options">
+              <input
+                type="radio"
+                name="q"
+                id="q1"
+                value="no"
+              />
+              <label for="q">The answer is 3.</label>
+            </div>
+            <pre
+              class="response"
+              id="log"
+            ></pre>
+            <button type="submit">Enter</button>
+          </fieldset>
+        </form>
+   
+        <div class="bottom-buttons">
+            <button class="btn next-btn">Next Question</button>
+          </a> 
+          <a href="results.html">
+            <button class="btn finish-btn">Finish</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
+

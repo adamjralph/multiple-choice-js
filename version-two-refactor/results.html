@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+  </head>
+  <body>
+    <section class="quiz">
+      <h1>Quiz</h1>
+      <div class="question">
+        <div class="results-text">
+          <h3>You have completed the test.</h3>
+          <p>Click the button below to see your results.</p>
+        </div>
+       
+        <form action="submit" class="results" id="results">
+            <button type="submit" class="results-btn">Show Results</button>
+        </form>
+        <a href="q1.html">
+          <button class="beginning-btn">Start Again</button>
+        </a>
+        <div
+          class="print-results"
+          id="display-results"
+          
+        >
+      </div>
+    </section>
+
+    <script>
+      let output = "";
+      const results = document.getElementById("results");
+      const displayResults = document.getElementById("display-results");
+      const list = document.getElementById('list')
+      let newElement = document.createElement('p')
+      let total = 0;
+
+      const resultsArray = []
+      results.addEventListener("submit", (e) => {
+
+        for(let i = 1; i < 3; i++) {
+          let answer = localStorage.getItem(i)
+          total += Number(answer)
+          resultsArray.push(answer)
+        }
+
+        for(let i = 0; i < 2; i++) {
+          let newItem = displayResults.appendChild(newElement.cloneNode(true));
+          newItem.innerText = `Question ${i+1} = ${resultsArray[i]}`
+        }
+
+        let newItem = displayResults.appendChild(newElement.cloneNode(true));
+        let percent = (total * 100) / 2; 
+        newItem.innerText = `Result = ${percent}%`
+        localStorage.clear()
+        e.preventDefault();
+      });
+    </script>
+ </body>
+</html>
