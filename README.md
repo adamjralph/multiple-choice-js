@@ -17,3 +17,17 @@ I thought about creating a more modern app that could be hosted and store data o
 ### FUTURE DEVELOPMENT
 
 Ideally this app will eventually contain multiple tests as well as a presentation of learning material to proceed the test, so I think eventually it will need a database. In addition I will want it to store the names of the students, their score and the scheduling of the next test or the next refresh test. It will therefore need an admin role, student roles and the ability of admin role to create, update and delete students.
+
+### TODO
+
+#### Version two
+
+- ~~ Add required validation to prevent null scores ~~
+- Message displays to select answer if nothing entered
+- ~~ Next button only appears after question has been answered ~~
+- Inactive form after enter button has been pressed
+- For the last question a "Finish" button should appear instead of "Next"
+
+#### Version three
+
+- Improve styles - Add bootstrap for pro look

@@ -10,7 +10,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Document</title>
+    <title>Question 2</title>
     <link
       rel="stylesheet"
       href="./css/style.css"
@@ -25,6 +25,7 @@
           class="question-2"
           id="question"
           data-number="2"
+          required
         >
           <fieldset>
             <h3>What is the answer to question 2?</h3>
@@ -62,10 +63,13 @@
             <button type="submit">Enter</button>
           </fieldset>
         </form>
-   
-        <div class="bottom-buttons">
-            <button class="btn next-btn">Next Question</button>
-          </a> 
+
+        <div
+          class="bottom-buttons"
+          id="next-button-parent"
+        >
+          <!-- <button class="btn next-btn">Next Question</button>
+          </a>  -->
           <a href="results.html">
             <button class="btn finish-btn">Finish</button>
           </a>
@@ -75,4 +79,3 @@
     <script src="./js/index.js"></script>
   </body>
 </html>
-
