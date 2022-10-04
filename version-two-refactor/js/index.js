@@ -3,14 +3,13 @@ const log = document.getElementById("log");
 const questionNum = Number(question.dataset.number);
 console.log(questionNum);
 
-function addNextButton() {
-  const questionNum = Number(question.dataset.number);
-  const nextButtonParent = document.getElementById("next-button-parent");
-  const nextButton = `<a href="q${questionNum + 1}.html">
-  <button class="btn next-btn">Next Question</button>
-  </a>`;
-  nextButtonParent.innerHTML = nextButton;
-  console.log({ nextButtonParent, questionNum, nextButtonParent });
+function enableNextButton() {
+  const nextButton = document.querySelector("#next-btn");
+  if (nextButton) {
+    nextButton.removeAttribute("disabled");
+  } else {
+    false;
+  }
 }
 
 question.addEventListener(
@@ -28,15 +27,20 @@ question.addEventListener(
       if (entry[1] === "correct") {
         localStorage.setItem(questionNum, 1);
         output = `That is the correct answer!`;
-        addNextButton();
+        enableNextButton();
       }
       if (entry[1] === "no") {
         localStorage.setItem(questionNum, 0);
         output = "Sorry, that is not the right answer";
-        addNextButton();
+        enableNextButton();
       }
       console.log(localStorage.getItem(questionNum));
     }
+    if (localStorage.getItem(questionNum) === null) {
+      // console.log("Nothing selected");
+      output = "Please select an answer";
+    }
+
     log.innerText = output;
     localStorage.clear();
     e.preventDefault();
