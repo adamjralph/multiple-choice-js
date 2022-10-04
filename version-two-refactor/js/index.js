@@ -7,9 +7,17 @@ function enableNextButton() {
   const nextButton = document.querySelector("#next-btn");
   if (nextButton) {
     nextButton.removeAttribute("disabled");
-  } else {
-    false;
   }
+  false;
+}
+
+function disableEnterButton() {
+  const enterButton = document.querySelector("#enter-btn");
+  if (enterButton) {
+    // disabled = "disabled";
+    enterButton.setAttribute("disabled", "");
+  }
+  false;
 }
 
 question.addEventListener(
@@ -28,11 +36,13 @@ question.addEventListener(
         localStorage.setItem(questionNum, 1);
         output = `That is the correct answer!`;
         enableNextButton();
+        disableEnterButton();
       }
       if (entry[1] === "no") {
         localStorage.setItem(questionNum, 0);
         output = "Sorry, that is not the right answer";
         enableNextButton();
+        disableEnterButton();
       }
       console.log(localStorage.getItem(questionNum));
     }
